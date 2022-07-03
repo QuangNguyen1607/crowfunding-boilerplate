@@ -39,6 +39,9 @@ module.exports = {
       },
       borderRadius: {
         '10px': '10px',
+      },
+      boxShadow: {
+        shadowPrimary: '10px 10px 20px rgba(211,211,211,.25)'
       }
     },
   },

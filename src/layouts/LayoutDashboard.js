@@ -1,9 +1,15 @@
-import React from 'react';
+import DashboardSidebar from "modules/dashboard/DashboardSidebar";
+import DashboardTopbar from "modules/dashboard/DashboardTopbar";
+import React from "react";
 
-const LayoutDashboard = ({children}) => {
+const LayoutDashboard = ({ children }) => {
 	return (
-		<div>
-			{children}
+		<div className="p-10 bg-lite-background">
+			<DashboardTopbar></DashboardTopbar>
+			<div className="flex">
+				<DashboardSidebar></DashboardSidebar>
+				<div>{children}</div>
+			</div>
 		</div>
 	);
 };
