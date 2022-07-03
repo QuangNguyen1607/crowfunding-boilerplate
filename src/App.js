@@ -7,6 +7,7 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <Routes>
+        <Route path="/" element={}></Route>
         <Route path='/sign-up' element={<SignUpPage></SignUpPage>}></Route>
         <Route path='/sign-in' element={<SignInPage></SignInPage>}></Route>
       </Routes>
