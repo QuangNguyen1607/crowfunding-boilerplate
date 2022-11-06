@@ -3,10 +3,35 @@
 @tailwind utilities;
 @layer base {
   body {
-    @apply font-body text-base font-normal;
-    line-height: 1.5
+    @apply font-body text-base font-normal mx-auto;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    max-width: 1440px;
   }
   input {
     @apply outline-none;
+  }
+}
+.quill{
+  border: 1px solid #f1f1f3;
+  border-radius: 10px;
+  padding: 15px 25px;
+  .ql-toolbar.ql-snow{
+    border: none;
+    background: none;
+    @apply bg-text4 bg-opacity-10 inline-block rounded-xl py-3 px-5 mx-auto
+  }
+  .ql-container {
+    border: 0px !important;
+    padding: 0 !important;
+    @apply p-0 border-none
+  }
+  .ql-editor {
+    @apply border-none font-body text-base pt-10
+  }
+  .ql-editor::before {
+    font-style: none;
+    @apply text-sm not-italic text-text4
   }
 }

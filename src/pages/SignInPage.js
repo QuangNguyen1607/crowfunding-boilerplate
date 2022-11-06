@@ -101,7 +101,7 @@ const SignInPage = () => {
 					to="/">
 					Forgot password
 				</Link>
-				<Button type="submit" className="bg-primary w-full">
+				<Button type="submit" className="w-full" kind='primary'>
 					Sign In
 				</Button>
 			</form>

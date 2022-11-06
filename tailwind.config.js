@@ -14,6 +14,7 @@ module.exports = {
         body: ["Epilogue", "sans-serif;"],
       },
       fontSize: {
+        '12px': '12px',
         '20px': '20px',
       },
       colors: {

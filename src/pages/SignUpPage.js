@@ -149,7 +149,7 @@ const SignUpPage = () => {
 						</p>
 					</div>
 
-					<Button type="submit" className="bg-primary w-full">
+					<Button type="submit" className="w-full" kind='primary'>
 						Create my account
 					</Button>
 				</form>

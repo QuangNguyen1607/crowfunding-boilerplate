@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import parse from "html-react-parser";
 import { v4 } from 'uuid';
 import styled from 'styled-components';
+import classNames from 'utils/classNames';
 const dataLink = [
 	{
 		to: "/",
@@ -56,7 +57,7 @@ const DashboardSidebarStyled = styled.div`
 const DashboardSidebar = () => {
 	return (
 		<DashboardSidebarStyled className="mr-10">
-			<div className="sticky top-0 rounded-[20px] shadow-[10px_10px_20px_rgba(218,213,213,0.15)] py-[40px] px-4 flex flex-col gap-y-[30px] min-h-[653px]">
+			<div className="sticky top-0 rounded-[20px] shadow-[10px_10px_20px_rgba(218,213,213,0.15)] py-[40px] px-4 flex flex-col gap-y-[30px] min-h-[653px] bg-white">
 				{dataLink.map(item => (
 					<DashboardSidebarItem key={v4()} to={item.to} title={item.title} onClick={item.onClick}>
 						{parse(item.icon)}
@@ -82,9 +83,15 @@ function DashboardSidebarItem({ children, to = '/', title = '', onClick }) {
 		);
 	}
 	return (
-		<NavLink className="flex items-center min-w-[48px] px-[10px] h-[48px] item-link rounded-[10px] gap-5 lg:gap-0 last:mt-auto last:bg-white last:shadow-shadowPrimary " to={to}>
+		<NavLink
+			className={
+				`flex items-center min-w-[48px] px-[10px] h-[48px] item-link rounded-[10px] gap-5 lg:gap-0 last:mt-auto last:bg-white last:shadow-shadowPrimary ${({isActive})=> isActive ? 'active' : ''}`
+			}
+			to={to}>
 			{children}
-			<span className='text-text3 font-medium text-sm lg:hidden'>{title}</span>
+			<span className="text-text3 font-medium text-sm lg:hidden">
+				{title}
+			</span>
 		</NavLink>
 	);
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const Label = ({children, className, htmlFor}) => {
+const Label = ({children, className = '', htmlFor}) => {
 	return (
-		<label htmlFor={htmlFor} className={`text-text2 font-medium text-sm inline-block cursor-pointer ${className} dark:text-text3`}>{children}</label>
+		<label htmlFor={htmlFor} className={`text-text2 font-medium text-sm inline-block cursor-pointer ${className} dark:text-text3 text-left`}>{children}</label>
 	);
 };
 Label.propTypes = {
